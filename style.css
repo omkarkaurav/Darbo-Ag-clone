@@ -228,7 +228,7 @@ nav:hover .btn-2 {
     align-items: center;
     padding-top: 30px;
     height: 110vh;
-    background-image: url(darbo-header_1-1920x1080.png.webp);
+    background-image: url(/static/images/darbo-header_1-1920x1080.png.webp);
     background-position-x: -4px;
     background-size: cover;
     border-image: fill 0 linear-gradient(to bottom, rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.521), rgba(153, 152, 152, 0), rgba(0, 0, 0, 0.205), rgba(0, 0, 0, 0.253), #00000056, rgba(0, 0, 0, 0.418));
@@ -625,7 +625,7 @@ nav:hover .btn-2 {
 }
 
 .now-big-photo {
-    background-image: url(bog\ photo.jpg.webp);
+    background-image: url(/static/images/bog\ photo.jpg.webp);
     width: 100%;
     height: 830px;
     overflow: hidden;
