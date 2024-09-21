@@ -220,6 +220,14 @@ nav:hover .btn-2 {
     border-right-width: 1px;
 }
 
+
+aside{
+    width: 100px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    display: none;
+}
 .hero {
     display: flex;
     justify-content: center;
@@ -989,11 +997,44 @@ th {
 @media screen and (max-width: 425px) {
 
     nav {
-        justify-content: center;
+        justify-content: space-between;
+        backdrop-filter:blur(6px) ;
+
+    }
+
+    .menu img {
+        color: #000000;
     }
 
     .part-1 {
+        display: flex;
+        padding-left: 10px;
+    }
+
+    nav:hover path {
+        stroke: #ffffff;
+    }
+    nav:hover {
+        background-color: rgba(255, 255, 255, 0);
+        transition: ease-in-out .39s;
+    }
+    nav:hover .part-2 img:nth-child(1) {
+        display: block;
+    }
+    
+    nav:hover .part-2 img:nth-child(2) {
         display: none;
+    }
+    
+
+    .part-1-left button {
+        padding: 1px 0px 0px 1px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-color: transparent;
+        background-color: transparent;
     }
 
     .part-1-right {
@@ -1001,13 +1042,116 @@ th {
     }
 
     .part-3 {
-        display: none;
+        display: flex;
         flex: 1;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        padding: 0 30px 0 12px;
+        padding: 0px;
+        padding-left: 10px;
     }
 
+    .part-3-left {
+        display: none;
+    }
+
+    .part-3-right {
+        display: none;
+
+    }
+
+    .menu-logo {
+        padding-left: 30px;
+    }
+
+    input {
+        position: absolute;
+        margin-top: 8px;
+        margin-left: 3px;
+        opacity: 0;
+        width: 35px;
+        height: 27px;
+        z-index: 99999;
+    }
+
+    .menu-logo .white-menu {
+        position: absolute;
+        /* z-index: 99999; */
+    }
+
+    nav:hover .white-menu {
+        display: block;
+        /* z-index: 99999; */
+    }
+    aside{
+        width: 50%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.096);
+        position: fixed;
+        display: block;
+        right: -50%;
+        top: 110px; 
+        z-index: 99999;
+        font-size: 20px;
+        backdrop-filter:blur(4px) ;
+        border-left: 1px solid rgba(255, 255, 255, 0.349);
+    }
+    .aside-1{
+        padding-left: 20px;
+        padding-top: 20px;
+        font-weight: 600;
+        font-family: "garam";   
+    }
+   
+    .aside-2{
+        padding-left: 20px;
+        padding-top: 20px;
+        font-weight: 600;
+        font-family: "garam";
+    }
+
+    .aside-3{
+        padding-left: 20px;
+        padding-top: 20px;
+        font-weight: 600;
+        font-family: "garam";
+    }
+
+    aside a{
+        text-decoration: none ;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    aside a svg{
+        fill: #ffffff;
+        transform: rotate(180deg);
+    }
+    aside li{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        list-style-type: none;
+        padding-bottom: 20px;
+    }
+    aside button{
+        margin-bottom: 20px;
+        padding: 5px 10px;
+        font-weight: 600;
+        font-family: "garam";
+        background-color: #f1e8e0;
+        backdrop-filter: blur(12px);
+        border: none;
+    }
+    #menu:checked ~ aside{
+        right: 0%;
+        transition: all 0.5s ease-in-out;
+    }
+    .checkbox{
+        position: fixed;
+        right: 13px;
+        top:27px
+    }
     .hero {
         display: flex;
         flex-direction: column;
@@ -1509,7 +1653,7 @@ th {
         width: 100%;
         height: 1.25px;
         background-color: rgba(195, 167, 142, 0.452);
-       
+
     }
 
     .recipi-ideas {
@@ -1537,7 +1681,7 @@ th {
         padding: 0px 20px;
         padding-top: 20px;
         padding-bottom: 15px;
-        
+
     }
 
     .recipi-ideas h5 {
@@ -1576,7 +1720,7 @@ th {
         overflow: hidden;
         margin-bottom: 10px;
     }
-  
+
     .gallery-2-p img {
         width: 100%;
         height: 166px;
@@ -1613,7 +1757,7 @@ th {
         font-family: "elongated";
         font-weight: normal;
         letter-spacing: 4px;
-        
+
     }
 
     .instagram a {
@@ -1645,6 +1789,7 @@ th {
         letter-spacing: 4px;
         font-size: 22px;
     }
+
     .footer-above-box h3 {
         font-size: 15px;
         padding: 0px 15px 15px 15px;
@@ -1681,7 +1826,8 @@ th {
         padding-top: 40px;
         padding-bottom: 20px;
     }
-    .footer-1 img{
+
+    .footer-1 img {
         width: 100px;
     }
 
@@ -1710,7 +1856,7 @@ th {
         text-align: start;
         line-height: 1.7;
         text-decoration: underline;
-        
+
     }
 
     .contact {
@@ -1755,10 +1901,12 @@ th {
     .footer-data {
         width: 120px;
     }
-    .about th{
+
+    .about th {
         font-size: 30px;
         padding-top: 5px;
     }
+
     .footer-data td {
         line-height: 1.8;
         font-family: "garam";
@@ -1769,7 +1917,8 @@ th {
         padding-left: 0px;
         padding-top: 50px;
     }
-    .footer-btn th{
+
+    .footer-btn th {
         font-size: 22px;
     }
 
@@ -1804,7 +1953,7 @@ th {
     .footer-3 {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center ;
+        justify-content: center;
         align-items: center;
         padding-bottom: 30px;
     }
@@ -1815,9 +1964,11 @@ th {
         gap: 24px;
         padding-bottom: 10px;
     }
-    .footer-3-1 img{
+
+    .footer-3-1 img {
         width: 25px;
     }
+
     .footer-3-2 {
         display: flex;
         justify-content: space-evenly;
