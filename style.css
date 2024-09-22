@@ -22,7 +22,6 @@
 html,
 body {
     background-color: #FAF7F3;
-
 }
 
 nav {
@@ -220,14 +219,39 @@ nav:hover .btn-2 {
     border-right-width: 1px;
 }
 
+.white-menu {
+    display: none;
+}
 
-aside{
+.black-menu {
+    display: none;
+}
+
+input {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 3px;
+    opacity: 1;
+    width: 35px;
+    height: 27px;
+    z-index: 99999;
+}
+
+.checkbox {
+    display: none;
+    position: fixed;
+    right: 13px;
+    top: 27px
+}
+
+aside {
     width: 100px;
     height: 100%;
     background-color: white;
     position: absolute;
     display: none;
 }
+
 .hero {
     display: flex;
     justify-content: center;
@@ -278,7 +302,6 @@ aside{
     color: rgb(255, 255, 255);
     padding-top: 60px;
     padding-bottom: 40px;
-
 }
 
 
@@ -998,7 +1021,7 @@ th {
 
     nav {
         justify-content: space-between;
-        backdrop-filter:blur(6px) ;
+        backdrop-filter: blur(6px);
 
     }
 
@@ -1014,27 +1037,36 @@ th {
     nav:hover path {
         stroke: #ffffff;
     }
+
     nav:hover {
         background-color: rgba(255, 255, 255, 0);
         transition: ease-in-out .39s;
     }
+
     nav:hover .part-2 img:nth-child(1) {
         display: block;
     }
-    
+
     nav:hover .part-2 img:nth-child(2) {
         display: none;
     }
-    
 
     .part-1-left button {
         padding: 1px 0px 0px 1px;
-        display: none;
+        display: flex;
         justify-content: center;
         align-items: center;
         color: white;
         border-color: transparent;
         background-color: transparent;
+    }
+
+    nav:hover button path {
+        fill: #ffffff;
+    }
+
+    nav:hover button {
+        color: white;
     }
 
     .part-1-right {
@@ -1056,7 +1088,6 @@ th {
 
     .part-3-right {
         display: none;
-
     }
 
     .menu-logo {
@@ -1078,63 +1109,73 @@ th {
         /* z-index: 99999; */
     }
 
-    nav:hover .white-menu {
+    .white-menu {
         display: block;
         /* z-index: 99999; */
     }
-    aside{
+
+    .black-menu {
+        display: block;
+        /* z-index: 99999; */
+    }
+
+    aside {
         width: 50%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.096);
+        background-color: rgba(255, 255, 255, 0);
         position: fixed;
         display: block;
         right: -50%;
-        top: 110px; 
+        top: 110px;
         z-index: 99999;
         font-size: 20px;
-        backdrop-filter:blur(4px) ;
+        backdrop-filter: blur(4px);
         border-left: 1px solid rgba(255, 255, 255, 0.349);
     }
-    .aside-1{
-        padding-left: 20px;
-        padding-top: 20px;
-        font-weight: 600;
-        font-family: "garam";   
-    }
-   
-    .aside-2{
+
+    .aside-1 {
         padding-left: 20px;
         padding-top: 20px;
         font-weight: 600;
         font-family: "garam";
     }
 
-    .aside-3{
+    .aside-2 {
         padding-left: 20px;
         padding-top: 20px;
         font-weight: 600;
         font-family: "garam";
     }
 
-    aside a{
-        text-decoration: none ;
+    .aside-3 {
+        padding-left: 20px;
+        padding-top: 20px;
+        font-weight: 600;
+        font-family: "garam";
+    }
+
+    aside a {
+        text-decoration: none;
         color: white;
         display: flex;
         align-items: center;
         gap: 5px;
     }
-    aside a svg{
+
+    aside a svg {
         fill: #ffffff;
         transform: rotate(180deg);
     }
-    aside li{
+
+    aside li {
         display: flex;
         align-items: center;
         gap: 5px;
         list-style-type: none;
         padding-bottom: 20px;
     }
-    aside button{
+
+    aside button {
         margin-bottom: 20px;
         padding: 5px 10px;
         font-weight: 600;
@@ -1143,15 +1184,45 @@ th {
         backdrop-filter: blur(12px);
         border: none;
     }
-    #menu:checked ~ aside{
+
+    #menu:checked~aside {
         right: 0%;
         transition: all 0.5s ease-in-out;
     }
-    .checkbox{
+
+    #menu:checked~main {
+        display: none;
+        transition: all .525s ease-in-out;
+    }
+
+    #menu:checked~footer {
+        display: none;
+        transition: all 0.525s ease-in-out;
+    }
+
+    #menu:checked~.fixed {
+        display: block;
+        background-image: url(darbo-header_1-1920x1080.png.webp);
+        background-size: cover;
+        background-position: center;
+        border-image: fill 0 linear-gradient(to bottom, rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.521), rgba(153, 152, 152, 0), rgba(0, 0, 0, 0.205), rgba(0, 0, 0, 0.253), #00000056, rgba(0, 0, 0, 0.418));
+    }
+
+    .fixed {
+        display: none;
+        width: calc(100%-110px);
+        height: 100vh;
+        background-color: #000000;
+        overflow: hidden;
+    }
+
+    .checkbox {
+        display: block;
         position: fixed;
         right: 13px;
-        top:27px
+        top: 27px
     }
+
     .hero {
         display: flex;
         flex-direction: column;
@@ -1217,7 +1288,6 @@ th {
         text-align: center;
     }
 
-
     .cloud {
         overflow: hidden;
         height: 370px;
@@ -1227,6 +1297,19 @@ th {
     .cloud img {
         width: fit-content;
         height: 370px;
+    }
+
+    .clouds {
+        overflow: hidden;
+        height: 235px;
+        margin-top: -145px;
+        padding-top: 10px;
+    }
+
+    .clouds img {
+        overflow: hidden;
+        width: fit-content;
+        height: 290px;
     }
 
     .slide {
@@ -1385,7 +1468,6 @@ th {
         width: 100%;
         font-family: "elongated";
         font-weight: lighter;
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1490,12 +1572,6 @@ th {
         z-index: 22;
     }
 
-
-
-
-
-
-
     .big-photo {
         display: flex;
     }
@@ -1508,7 +1584,6 @@ th {
         padding-top: 300px;
         position: absolute;
         width: 100%;
-
     }
 
     .b-p-below-text {
@@ -1535,7 +1610,6 @@ th {
         position: relative;
         z-index: 9999;
         margin-top: -90px;
-
     }
 
     .white-background h3 {
@@ -1550,7 +1624,6 @@ th {
     }
 
     .upper-text {
-
         width: 240px;
         height: 530px;
         position: absolute;
@@ -1653,7 +1726,6 @@ th {
         width: 100%;
         height: 1.25px;
         background-color: rgba(195, 167, 142, 0.452);
-
     }
 
     .recipi-ideas {
@@ -1681,7 +1753,6 @@ th {
         padding: 0px 20px;
         padding-top: 20px;
         padding-bottom: 15px;
-
     }
 
     .recipi-ideas h5 {
@@ -1757,7 +1828,6 @@ th {
         font-family: "elongated";
         font-weight: normal;
         letter-spacing: 4px;
-
     }
 
     .instagram a {
@@ -1981,5 +2051,4 @@ th {
         justify-content: space-around;
         font-size: 10px;
     }
-
 }
