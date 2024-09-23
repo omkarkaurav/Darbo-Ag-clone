@@ -1034,6 +1034,14 @@ th {
 }
 
 
+.fixed {
+    display: none;
+    width: calc(100%-110px);
+    height: 100vh;
+    background-color: #000000;
+    overflow: hidden;
+}
+
 @media screen and (max-width: 425px) {
 
     nav {
