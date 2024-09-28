@@ -187,13 +187,30 @@ nav:hover .part-2 img:nth-child(2) {
     word-spacing: 3px;
 }
 
+.part-3 button a {
+    font-family: "garam";
+    font-size: 13px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+}
+
 .part-3-right .btn-2 {
     background-color: white;
     color: rgb(0, 0, 0);
 }
 
+.part-3-right .btn-2 a {
+    color: rgb(0, 0, 0);
+}
+
 nav:hover .part-3 button {
     border-color: black;
+}
+
+nav:hover .part-3 .btn-1 a {
+    color: rgb(0, 0, 0);
 }
 
 nav:hover .btn-2 {
@@ -202,10 +219,18 @@ nav:hover .btn-2 {
     border-color: white;
 }
 
+nav:hover .btn-2 a {
+    color: white;
+}
+
 .part-3 .btn-1:hover {
     background-color: #c3a78e;
     color: white;
     border-color: #c3a78e;
+}
+
+.part-3 .btn-1:hover a {
+    color: white;
 }
 
 .part-3 .btn-2:hover {
@@ -346,10 +371,13 @@ aside {
     align-items: center;
     width: 100%;
     height: 330px;
-    margin-top: -320px;
+    margin-top: -420px;
     overflow-x: hidden;
 }
 
+.products a:hover{
+    color: #C3A78E;
+}
 .prdct {
     display: flex;
     justify-content: center;
@@ -358,7 +386,7 @@ aside {
     width: 160px;
     gap: 50px;
     /* margin-top: -100px; */
-    animation: bounce 10.5s alternate-reverse linear infinite;
+    animation: bounce 20.5s alternate-reverse linear infinite;
 }
 
 .prdcts {
@@ -369,25 +397,25 @@ aside {
     width: 160px;
     gap: 50px;
     /* margin-top: -100px; */
-    animation: bounce-2 10.5s alternate-reverse linear infinite;
+    animation: bounce-2 20.5s alternate-reverse linear infinite;
 }
 
 @keyframes bounce {
     from {
-        transform: translateY(-55px);
+        transform: translateY(-25px);
     }
 
     to {
-        transform: translateY(55px);
+        transform: translateY(25px);
     }
 }
 @keyframes bounce-2 {
     from {
-        transform: translateY(55px);
+        transform: translateY(25px);
     }
 
     to {
-        transform: translateY(-55px);
+        transform: translateY(-25px);
     }
 }
 
@@ -413,6 +441,7 @@ aside {
     text-decoration: none;
     letter-spacing: 1.2px;
     color: rgb(82, 82, 81);
+    transition: all 0.3s ease-in-out;
 }
 
 .prdcts a {
@@ -423,6 +452,7 @@ aside {
     text-decoration: none;
     letter-spacing: 1.2px;
     color: rgb(82, 82, 81);
+    transition: all 0.3s ease-in-out;
 }
 
 .round-2-div {
@@ -1327,14 +1357,13 @@ th {
     .clouds {
         overflow: hidden;
         height: 235px;
-        margin-top: -145px;
-        padding-top: 10px;
+        margin-top: -100px;
     }
 
     .clouds img {
         overflow: hidden;
         width: fit-content;
-        height: 290px;
+        height: 370px;
     }
 
     .slide {
@@ -1343,7 +1372,7 @@ th {
         white-space: nowrap;
         gap: 60px;
         justify-content: space-evenly;
-        animation: marquee 15s ease-in-out infinite;
+        animation: marquee 35s ease-in-out infinite;
         animation-timing-function: cubic-bezier(1, 1, 0, 0);
     }
 
